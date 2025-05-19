@@ -23,6 +23,12 @@ const DashboardLayout = () => {
             <Link to="/projects" className="block hover:text-purple-300 text-white  transition">
               Projects
             </Link>
+            <Link to="/experience" className="block hover:text-purple-300 text-white  transition">
+              Experience
+            </Link>
+            <Link to="/skills" className="block hover:text-purple-300 text-white  transition">
+              Skills
+            </Link>
           </nav>
         </div>
         <Button variant="destructive" onClick={handleLogout} className="w-[80%] mt-6 text-white absolute bottom-8">
@@ -48,6 +54,12 @@ const DashboardLayout = () => {
                 </Link>
                 <Link to="/projects" className="block hover:text-purple-300 transition">
                   Projects
+                </Link>
+                <Link to="/experience" className="block hover:text-purple-300 text-white  transition">
+                  Experience
+                </Link>
+                <Link to="/skills" className="block hover:text-purple-300 text-white  transition">
+                  Skills
                 </Link>
               </nav>
               <Button variant="destructive" onClick={handleLogout} className="w-full mt-6 text-white">

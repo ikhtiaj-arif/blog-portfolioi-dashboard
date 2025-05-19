@@ -23,3 +23,33 @@ export const handleImageUpload = async (file: File): Promise<string | null> => {
     return null;
   }
 };
+
+// export const handleImageUpload = async (file: File): Promise<string | null> => {
+//   const cloudName = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
+//   const uploadPreset = import.meta.env.VITE_CLOUDINARY_UPLOAD_PRESET;
+
+//   const url = `https://api.cloudinary.com/v1_1/${cloudName}/upload`;
+
+//   const formData = new FormData();
+//   formData.append('file', file);
+//   formData.append('upload_preset', uploadPreset);
+
+//   try {
+//     const response = await fetch(url, {
+//       method: 'POST',
+//       body: formData,
+//     });
+
+//     const result = await response.json();
+
+//     if (response.ok) {
+//       return result.secure_url; // Return the image URL
+//     } else {
+//       console.error('Cloudinary upload failed:', result);
+//       return null;
+//     }
+//   } catch (error) {
+//     console.error('Image upload error:', error);
+//     return null;
+//   }
+// };

@@ -185,3 +185,10 @@
     background-color: #f0f0f0;
   }
 }
+.mark {
+  background-color: yellow;
+}
+.ProseMirror {
+height: 160px;
+padding: 0 4px
+}

@@ -1,11 +1,18 @@
+
 "use client";
 
 import {
-  useGetBlogsQuery,
-  useDeleteBlogMutation,
   useCreateBlogMutation,
+  useDeleteBlogMutation,
+  useGetBlogsQuery,
   useUpdateBlogMutation,
 } from "@/app/features/blogs/blogApi";
+import TiptapEditor from "@/components/TiptapEditor";
+import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import {
   Table,
   TableBody,
@@ -14,13 +21,8 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Checkbox } from "@/components/ui/checkbox";
-import { useState } from "react";
 import { handleImageUpload } from "@/utils/imageUploader";
+import { useState } from "react";
 
 
 
@@ -152,13 +154,22 @@ const Blogs = () => {
 
               <div className="space-y-2">
                 <Label>Content</Label>
-                <textarea
+                {/* <textarea
                   name="content"
                   value={form.content}
                   onChange={handleChange}
                   className="w-full border rounded p-2"
                   rows={4}
+                /> */}
+                <TiptapEditor
+                  value={form.content || ""}
+                  onChange={(newContent) =>
+                    setForm((prev) => ({ ...prev, content: newContent }))
+                  }
                 />
+
+
+
               </div>
 
               <div className="space-y-2">

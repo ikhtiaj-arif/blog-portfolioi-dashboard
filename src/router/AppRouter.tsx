@@ -5,6 +5,8 @@ import Blogs from "@/features/dashboard/Blogs";
 import Projects from "@/features/dashboard/Projects";
 import ProtectedRoute from "@/features/auth/ProtectedRoute";
 import NotFound from "@/pages/NotFound";
+import Experiences from "@/features/dashboard/experience";
+import SkillsDashboard from "@/features/dashboard/SkillsDashboard";
 
 const AppRouter = () => (
   <Routes>
@@ -19,6 +21,8 @@ const AppRouter = () => (
     >
       <Route index element={<Blogs />} />
       <Route path="projects" element={<Projects />} />
+      <Route path="experience" element={<Experiences />} />
+      <Route path="skills" element={<SkillsDashboard />} />
     </Route>
     <Route path="*" element={<NotFound />} />
   </Routes>
