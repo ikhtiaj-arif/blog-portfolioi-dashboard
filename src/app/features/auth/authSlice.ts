@@ -28,6 +28,8 @@ const authSlice = createSlice({
       state.token = token;
     },
     logOut: (state) => {
+      localStorage.setItem("accessToken" , "")
+      window.location.reload()
       state.user = null;
       state.token = null;
     },
